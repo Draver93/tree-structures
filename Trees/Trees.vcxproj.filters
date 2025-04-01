@@ -2,5 +2,40 @@
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="BinaryTree\BinaryTree.cpp">
+      <Filter>BinaryTree</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="AVLTree">
+      <UniqueIdentifier>{87ce16e0-fe43-453e-beab-c47d399673b4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="RedBlackTree">
+      <UniqueIdentifier>{277dc490-933b-4c88-9cc5-6135b15ca4d8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="HeapTree">
+      <UniqueIdentifier>{9498d76e-7d56-4461-b9c5-43746e5caaf9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="BTree">
+      <UniqueIdentifier>{398d5f3a-afa9-4c96-b5e5-932d2f11f00a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="PrefixTree">
+      <UniqueIdentifier>{c362e3d5-96b8-40e7-95b9-2591c81869a3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="QuadTree">
+      <UniqueIdentifier>{156c0e87-be27-4867-8b14-70d820a622bb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="OctTree">
+      <UniqueIdentifier>{d2291fb8-9239-4545-a593-d587bad8b762}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="BinaryTree">
+      <UniqueIdentifier>{ea0a743f-c708-4d13-9704-122eb5e0fee4}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="BinaryTree\BinaryTree.h">
+      <Filter>BinaryTree</Filter>
+    </ClInclude>
+    <ClInclude Include="Tree.h" />
   </ItemGroup>
 </Project>
