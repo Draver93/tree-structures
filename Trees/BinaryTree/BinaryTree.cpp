@@ -2,8 +2,8 @@
 
 template<typename T>
 void BinaryTree<T>::insert(T val) {
-	if (!root) root = std::make_shared<Node>(val);
-	else insert(val, root);
+	if (!m_root) m_root = std::make_shared<Node>(val);
+	else insert(val, m_root);
 }
 
 template<typename T>
@@ -26,7 +26,7 @@ T BinaryTree<T>::pop_largest(std::shared_ptr<Node> node, std::shared_ptr<Node> p
 
 	T largest_value = node->value;
 	if (parent) parent->right = node->left;
-	else if (root == node) root = node->left;
+	else if (m_root == node) m_root = node->left;
 
 	return largest_value;
 }
@@ -57,14 +57,14 @@ void BinaryTree<T>::remove(T val, std::shared_ptr<Node> node, std::shared_ptr<No
 
 template<typename T>
 void BinaryTree<T>::remove(T val) {
-	if (!root) return;
+	if (!m_root) return;
 
-	if (root->value == val) {
-		if (!root->left && !root->right) root = nullptr;
-		else if (root->left && root->right) root->value = pop_largest(root->left, root);
-		else root = (root->left) ? root->left : root->right;
+	if (m_root->value == val) {
+		if (!m_root->left && !m_root->right) m_root = nullptr;
+		else if (m_root->left && m_root->right) m_root->value = pop_largest(m_root->left, m_root);
+		else m_root = (m_root->left) ? m_root->left : m_root->right;
 	}
-	else remove(val, root, nullptr);
+	else remove(val, m_root, nullptr);
 }
 
 
@@ -78,8 +78,8 @@ bool BinaryTree<T>::search(T val, std::shared_ptr<Node> node) {
 
 template<typename T>
 bool BinaryTree<T>::search(T val) {
-	if (!root) return false;
-	return search(val, root);
+	if (!m_root) return false;
+	return search(val, m_root);
 }
 
 
@@ -93,9 +93,9 @@ void BinaryTree<T>::to_vec_dfs(std::shared_ptr<Node> node, std::vector<T>& out) 
 
 template<typename T>
 std::vector<T> BinaryTree<T>::to_vec() {
-
+	//need to check size and reserve 
 	std::vector<T> result;
-	to_vec_dfs(root, result);
+	to_vec_dfs(m_root, result);
 
 	return result;
 }

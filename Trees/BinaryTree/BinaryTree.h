@@ -16,7 +16,7 @@ private:
 		}
 	};
 
-	std::shared_ptr<Node> root;
+	std::shared_ptr<Node> m_root;
 
 private:
 	void insert(T val, std::shared_ptr<Node> node);

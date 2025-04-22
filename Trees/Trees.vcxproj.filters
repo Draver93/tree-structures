@@ -5,6 +5,7 @@
     <ClCompile Include="BinaryTree\BinaryTree.cpp">
       <Filter>BinaryTree</Filter>
     </ClCompile>
+    <ClCompile Include="AVLTree\AVLBinaryTree.cpp" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="AVLTree">
@@ -37,5 +38,6 @@
       <Filter>BinaryTree</Filter>
     </ClInclude>
     <ClInclude Include="Tree.h" />
+    <ClInclude Include="AVLTree\AVLBinaryTree.h" />
   </ItemGroup>
 </Project>
